@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PHILANDCO Human Resources Corp. — A DMW-licensed recruitment agency deploying qualified Filipino workers worldwide since 2014.">
     <title>PHILANDCO HUMAN RESOURCES CORP.</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="home-page">
     <header>
         <nav class="navbar">
             <div class="brand">
@@ -17,6 +19,12 @@
                     <span class="brand-tag">HUMAN RESOURCES CORP.</span>
                 </div>
             </div>
+
+            <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="nav-center">
                 <ul class="nav-links">
@@ -32,84 +40,131 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-inner">
-                <span class="hero-badge">PHILANDCO HUMAN RESOURCES CORP.</span>
-                <h1><span>WELCOME TO OUR COMPANY</span></h1>
-                <p>
-                    We are a duly licensed land-based recruitment agency authorized by the Department of Migrant Workers.
-                    We recruit and deploy Filipino workers to the Middle East, Asia, North America, Europe and Oceania.
-                </p>
+        <!-- Hero -->
+        <section id="home" class="hero home-hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="hero-badge"><i class="fas fa-certificate"></i> DMW Licensed</span>
 
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-secondary">Apply Now!</a>
+                    </div>
+
+                    <h1 class="hero-headline">
+                       <span class="text-accent">PHILANDCO</span>  HUMAN RESOURCES CORP.
+                    </h1>
+
+                    <p class="hero-lead">
+                        We are a duly licensed land-based recruitment agency authorized by the Department of Migrant Workers.
+                        We recruit and deploy qualified Filipino workers to the Middle East, Asia, North America, Europe, and Oceania.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="employer.html" class="btn btn-primary">
+                            <i class="fas fa-building"></i> For Employers
+                        </a>
+                        <a href="applicant.html" class="btn btn-secondary">
+                            <i class="fas fa-user-tie"></i> Apply Now
+                        </a>
+                    </div>
+
+                    <div class="hero-stats" aria-label="Company highlights">
+                        <div class="hero-stat">
+                            <strong>2014</strong>
+                            <span>Founded</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>5+</strong>
+                            <span>Global Regions</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>DMW</strong>
+                            <span>Authorized</span>
+                        </div>
+                    </div>
                 </div>
 
-
-                <div class="hero-highlights" aria-label="Highlights">
-                    <div class="highlight">
-                        <i class="fas fa-user-check"></i>
-                        <div class="highlight-text">
-                            <strong>Qualified Talent</strong>
-                            <span>Screened & supported</span>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-visual-card">
+                        <div class="hero-visual-globe">
+                            <i class="fas fa-globe-asia"></i>
                         </div>
-                    </div>
-                    <div class="highlight">
-                        <i class="fas fa-handshake"></i>
-                        <div class="highlight-text">
-                            <strong>Trusted Partners</strong>
-                            <span>Employer-first service</span>
-                        </div>
-                    </div>
-                    <div class="highlight">
-                        <i class="fas fa-plane-departure"></i>
-                        <div class="highlight-text">
-                            <strong>Global Deployment</strong>
-                            <span>Multi-region placements</span>
+                        <p class="hero-visual-label">Global Deployment Network</p>
+                        <div class="hero-regions">
+                            <span><i class="fas fa-map-marker-alt"></i> Middle East</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Asia</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Europe</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="hero-wallpaper-strip" aria-hidden="true"></div>
             </div>
         </section>
 
+        <!-- Trust strip -->
+        <section class="trust-strip" aria-label="Why clients trust us">
+            <div class="section-wrap trust-strip-inner">
+                <div class="trust-item">
+                    <i class="fas fa-user-check"></i>
+                    <div>
+                        <strong>Qualified Talent</strong>
+                        <span>Screened, certified &amp; supported</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-handshake"></i>
+                    <div>
+                        <strong>Trusted Partners</strong>
+                        <span>Employer-first service</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-plane-departure"></i>
+                    <div>
+                        <strong>End-to-End Process</strong>
+                        <span>From recruitment to deployment</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>Fully Licensed</strong>
+                        <span>DMW-authorized agency</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-
-
-        <section id="contact" class="contact">
+        <!-- Services preview -->
+        <section class="home-services">
             <div class="section-wrap">
-                <h2>Contact Us</h2>
-                <p class="contact-intro">Choose your pathway below to connect with our team</p>
-                <div class="contact-pathways">
+                <div class="section-header">
+                    <span class="section-eyebrow">What We Do</span>
+                    <h2>Recruitment Solutions Built for Global Employers</h2>
+                    <p>We deliver high-quality, timely placements across skilled, semi-skilled, and professional roles — with the legal and administrative expertise to make overseas hiring seamless.</p>
+                </div>
 
-                    <!-- Employer Contact -->
-                    <div class="contact-card employer-card">
-                        <div class="card-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>For Employers</h3>
-                        <p>Looking to recruit qualified professionals? Our team is ready to assist you with tailored staffing solutions for your organization.</p>
-                        <a href="employer.html" class="btn btn-primary">Inquire Now</a>
-                    </div>
-
-                    <!-- Applicant Contact -->
-                    <div class="contact-card applicant-card">
-                        <div class="card-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>For Applicants</h3>
-                        <p>Interested in career opportunities abroad? Explore exciting job placements with competitive benefits and professional support.</p>
-                        <a href="applicant.html" class="btn btn-primary">Apply Now</a>
-                    </div>
-
+                <div class="home-services-grid">
+                    <article class="home-service-card">
+                        <div class="home-service-icon"><i class="fas fa-users"></i></div>
+                        <h3>Manpower Pooling</h3>
+                        <p>Access a wide database of workers across construction, hospitality, healthcare, automotive, and household services.</p>
+                    </article>
+                    <article class="home-service-card">
+                        <div class="home-service-icon"><i class="fas fa-file-contract"></i></div>
+                        <h3>Legal &amp; Compliance</h3>
+                        <p>Navigate work permits, documentation, and deployment requirements with an experienced team that handles the complexity for you.</p>
+                    </article>
+                    <article class="home-service-card">
+                        <div class="home-service-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Fast Deployment</h3>
+                        <p>Recruit and deploy workers effectively and efficiently — meeting your present and future staffing needs without delay.</p>
+                    </article>
                 </div>
             </div>
         </section>
+
+
     </main>
 
-    <!-- Social Bar -->
     <div class="social-bar">
         <span>Get connected with us on social networks:</span>
         <div class="social-icons">
@@ -118,11 +173,8 @@
         </div>
     </div>
 
-    <!-- Main Footer -->
     <footer class="footer-main">
         <div class="footer-grid">
-
-            <!-- Company -->
             <div class="footer-col brand-col">
                 <div class="company-name">Philandco Human Resources Corp.</div>
                 <p class="company-desc">
@@ -130,7 +182,6 @@
                 </p>
             </div>
 
-            <!-- Contact -->
             <div class="footer-col">
                 <h4>Contact Us</h4>
 
@@ -155,13 +206,10 @@
                         Unit 301-310, 3rd Floor, Discovery Plaza Building 1674 A. Mabini Street, Malate, Manila, Philippines
                     </div>
                 </div>
-
             </div>
-
         </div>
     </footer>
 
-    <!-- Bottom Bar -->
     <div class="footer-bottom">
         <p>&copy; 2026 <span>Phil &amp; Co HRC</span>. All rights reserved.</p>
     </div>
