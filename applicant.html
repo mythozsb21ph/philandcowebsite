@@ -34,25 +34,63 @@
     <main>
         <section class="contact" id="applicant">
             <div class="section-wrap">
-                <h2>Applicant Information Form</h2>
-                <p class="contact-intro" style="margin-bottom: 2.5rem;">
+                <h2 class="animate-fade-up">Applicant Information Form</h2>
+                <p class="contact-intro animate-fade-up delay-2" style="margin-bottom: 2.5rem;">
                     Submit your staffing requirements below. After submission, your request will be sent to <strong>recruitment.philandcohrc@gmail.com</strong>. Our recruitment team will review your requirements and get in touch with you within 24 hours to discuss the next steps.
                 </p>
 
-                <div class="applicant-form" style="text-align:center;">
-                    <a
-                        class="btn btn-primary"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdrJ4fidqXGKMCOaDaJ1kHG9Evf3IHM0ibZmnEiPmtpvFLStw/viewform?usp=publish-editor"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="fas fa-paper-plane"></i> Submit Application
-                    </a>
+                <div class="applicant-form animate-fade-up delay-3" style="text-align:center;">
+                    <form method="POST" action="https://formsubmit.co/recruitment.philandcohrc@gmail.com" enctype="multipart/form-data" class="applicant-form" style="text-align:center;">
+                        <input type="hidden" name="_subject" value="Applicant Submission - PHILANDCO">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="">
 
-                    <p class="form-note" style="margin-top: 1rem; color: rgba(255,255,255,0.75); font-size: 0.92rem; text-align: center;">
-                        Your responses will be sent to the PHILANDCO HR recruitment team through Google Forms.
-                    </p>
+                        <div style="display:grid; gap:0.75rem; margin-top: 0;">
+                            <label style="display:none;">Full Name</label>
+                        <input type="text" name="Full Name" placeholder="Your Full Name" required class="animate-fade-up delay-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">City Address</label>
+                            <input type="text" name="City Address" placeholder="Your City Address" required class="animate-fade-up delay-5" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Email Address</label>
+                            <input type="email" name="Email Address" placeholder="Your Email Address" required class="animate-fade-up delay-6" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">WhatsApp Number</label>
+                            <input type="tel" name="Phone Number" placeholder="Your Active WhatsApp Number" required class="animate-fade-up delay-7" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Date of Birth</label>
+                            <input type="text" name="Date Of Birth" placeholder="Your Date of Birth" required class="animate-fade-up delay-8" onfocus="this.type='date'" onblur="if (!this.value) this.type='text'" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Gender</label>
+                            <select name="Gender" required class="animate-fade-up delay-15" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;">
+                                <option value="" disabled selected>Select Your Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+
+                            <label style="display:none;">Message</label>
+                            <textarea name="Position" placeholder="Your staffing requirements / position you are applying for" required class="animate-fade-up delay-10" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px; min-height: 140px; resize: vertical;"></textarea>
+
+                            <label for="resume" class="animate-fade-up delay-11">Upload Resume</label>
+                            <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx" required class="animate-fade-up delay-12" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;">
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-primary animate-fade-scale delay-13" style="margin-top: 1rem;">
+                            <i class="fas fa-paper-plane"></i> Submit Application
+                        </button>
+
+                        <p class="form-note animate-fade-up delay-14" style="margin-top: 1rem; color: rgba(255,255,255,0.75); font-size: 0.92rem; text-align: center;">
+                            By submitting, your application will be emailed directly to our recruitment team.
+                        </p>
+                        <p id="form-success" class="form-note animate-fade-up delay-15" style="display: none; margin-top: 1rem; color: #7dffb8; font-size: 0.95rem; text-align: center;">
+                            <i class="fas fa-check-circle"></i> Thank you! Your application has been sent. Our team will contact you within 24 hours.
+                        </p>
+                    </form>
                 </div>
+
 
             </div>
         </section>
