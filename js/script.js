@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const hamburger = document.querySelector('.hamburger');
 const navCenter = document.querySelector('.nav-center');
 
-if (hamburger) {
+if (hamburger && navCenter) {
     hamburger.addEventListener('click', () => {
-        navCenter.classList.toggle('active');
+        const isOpen = navCenter.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
     });
 }
 
@@ -115,17 +116,33 @@ inputs.forEach(input => {
     });
 });
 
+// Set FormSubmit redirect URL to the current page (works on any domain)
+document.querySelectorAll('form[action*="formsubmit.co"]').forEach((form) => {
+    const nextInput = form.querySelector('input[name="_next"]');
+    if (nextInput) {
+        nextInput.value = `${window.location.origin}${window.location.pathname}?submitted=true`;
+    }
+});
+
+// Show success message after FormSubmit redirect
+if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+    const successMsg = document.getElementById('form-success');
+    if (successMsg) {
+        successMsg.style.display = 'block';
+    }
+}
+
 // Form submission
-// Note: Some pages use an external form service (formsubmit.co).
+// Note: Some pages use an external form service (formsubmit.co / formspree.io).
 // This script must NOT block those real submissions.
 const forms = document.querySelectorAll('form');
 
 forms.forEach((form) => {
-    // If the form is using formsubmit.co, allow the browser to submit normally.
     const action = (form.getAttribute('action') || '').trim();
-    const usesFormSubmit = action.includes('formsubmit.co');
+    const usesExternalFormService =
+        action.includes('formsubmit.co') || action.includes('formspree.io');
 
-    if (usesFormSubmit) return;
+    if (usesExternalFormService) return;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
