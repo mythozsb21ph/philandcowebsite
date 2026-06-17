@@ -34,27 +34,59 @@
     <main>
         <section class="contact" id="employer">
             <div class="section-wrap">
-                <h2>Employer Information Form</h2>
-                <p class="contact-intro" style="margin-bottom: 2.5rem;">
+                <h2 class="animate-fade-up">Employer Information Form</h2>
+                <p class="contact-intro animate-fade-up delay-2" style="margin-bottom: 2.5rem;">
                     Submit your requirements below. After submission, your request will be sent to
                     <strong>irecruit@philandcohrc.com</strong>.
                 </p>
 
-                <div class="applicant-form" style="text-align:center;">
-                    <a
-                        class="btn btn-primary"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdqnsev9ibBYoSzESGk3DoZNT8Nol-TCEqdEnaJ0LoqsUEN0A/viewform?usp=publish-editor"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <i class="fas fa-paper-plane"></i> Submit Employer Request
-                    </a>
+                <div class="applicant-form animate-fade-up delay-3" style="text-align:center;">
+                    <form method="POST" action="https://formsubmit.co/irecruit@philandcohrc.com" class="applicant-form" style="text-align:center;">
+                        <input type="hidden" name="_subject" value="Employer Submission - PHILANDCO">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="">
 
-                    <p class="form-note" style="margin-top: 1rem; color: rgba(255,255,255,0.75); font-size: 0.92rem; text-align: center;">
-                        Your request will be submitted to our manager through Google Forms.
-                    </p>
+                        <div style="display:grid; gap:0.75rem; margin-top: 0;">
+                            <label style="display:none;">Full Name</label>
+                            <input type="text" name="Full Name" placeholder="Your Full Name" required class="animate-fade-up delay-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Company Name</label>
+                            <input type="text" name="Company Name" placeholder="Company Name" required class="animate-fade-up delay-5" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Position/Title</label>
+                            <input type="text" name="Position/Title" placeholder="Position/Title" required class="animate-fade-up delay-6" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Active WhatsApp Number</label>
+                            <input type="tel" name="Active WhatsApp Number" placeholder="Active WhatsApp No." required class="animate-fade-up delay-7" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Country Destination</label>
+                            <input type="text" name="Country Destination" placeholder="Country Destination" required class="animate-fade-up delay-8" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Positions Need to Hire</label>
+                            <input type="text" name="Positions Need to Hire" placeholder="Positions Need to Hire" required class="animate-fade-up delay-9" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">How Many Required</label>
+                            <input type="number" name="How Many Required" placeholder="How Many Required" min="1" required class="animate-fade-up delay-10" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px;" />
+
+                            <label style="display:none;">Job Description</label>
+                            <textarea name="Job Description" placeholder="Job Description" required class="animate-fade-up delay-11" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: var(--text); padding: 0.95rem 1.1rem; border-radius: 14px; min-height: 140px; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary animate-fade-scale delay-12" style="margin-top: 1rem;">
+                            <i class="fas fa-paper-plane"></i> Submit Employer Request
+                        </button>
+
+                        <p class="form-note animate-fade-up delay-13" style="margin-top: 1rem; color: rgba(255,255,255,0.75); font-size: 0.92rem; text-align: center;">
+                            By submitting, your request will be emailed directly to our recruitment team.
+                        </p>
+                        <p id="form-success" class="form-note animate-fade-up delay-15" style="display: none; margin-top: 1rem; color: #7dffb8; font-size: 0.95rem; text-align: center;">
+                            <i class="fas fa-check-circle"></i> Thank you! Your application has been sent. Our manager will contact you within 24 hours.
+                        </p>
+                    </form>
 
                 </div>
+
 
             </div>
         </section>
